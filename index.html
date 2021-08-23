@@ -60,10 +60,11 @@
         </div>
     </div>
 
-    <script>
+   <script>
         document.getElementById('output').style.visibility='hidden';
         document.getElementById('currencyInput').addEventListener('input',function(e){
-            let currentInput=e.target.value;
+            let currentInput=Number(e.target.value);
+            console.log(typeof(currentInput))
             
             if(currentInput>0){
                 document.getElementById('output').style.visibility='visible';
@@ -74,8 +75,10 @@
                 
             }
             else{
-                alert('Iltimos 0 va manfiy son kiritmang');
-                return currentInput.value='';
+                alert('dsdsadasd');
+                let cur=document.getElementById('currencyInput');
+                cur.value=''
+                document.getElementById('output').style.visibility='hidden';
             }
         })
     </script>
